@@ -1,0 +1,22 @@
+{
+  "name": "pastebin-app",
+  "version": "1.0.0",
+  "description": "A simple pastebin-like application with MongoDB",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "vercel-build": "npm install"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "mongoose": "^7.5.0",
+    "nanoid": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Pastebin</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Pastebin</h1>
+        <p>Create and share text snippets instantly</p>
+      </header>
+
+      <div class="content">
+        <div class="form-group">
+          <label for="content">Paste your content:</label>
+          <textarea
+            id="content"
+            placeholder="Enter your text here...&#10;You can paste code, notes, or any text content."
+            rows="10"
+          ></textarea>
+          <div id="content-error" class="error"></div>
+        </div>
+
+        <div class="options">
+          <div class="option-card">
+            <h3>Expiration Time</h3>
+            <p>Set how long your paste will be available (in seconds)</p>
+            <input
+              type="number"
+              id="ttl"
+              min="1"
+              placeholder="Expiration Time in Seconds"
+            />
+            <div id="ttl-error" class="error"></div>
+          </div>
+
+          <div class="option-card">
+            <h3>View Limit</h3>
+            <p>Maximum number of times your paste can be viewed</p>
+            <input
+              type="number"
+              id="max-views"
+              min="1"
+              placeholder="e.g., 10"
+            />
+            <div id="max-views-error" class="error"></div>
+          </div>
+        </div>
+
+        <button id="submit-btn" class="submit-btn">Create Paste</button>
+
+        <div id="result" class="result">
+          <h3>✅ Paste Created Successfully!</h3>
+          <p>Your paste URL:</p>
+          <div id="url-display" class="url-display"></div>
+          <button id="copy-btn" class="copy-btn">📋 Copy URL</button>
+          <p style="margin-top: 15px; color: #666; font-size: 0.9rem">
+            You can also access it via API at:
+            <span id="api-url" style="font-family: monospace"></span>
+          </p>
+        </div>
+      </div>
+
+      <footer>
+        <p>
+          Built with Express.js & MongoDB | Pastes are automatically deleted
+          based on constraints
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
