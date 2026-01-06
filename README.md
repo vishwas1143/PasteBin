@@ -23,7 +23,7 @@ A lightweight Pastebin-like web application to create and share text or code sni
 - MongoDB (Mongoose)  
 - NanoID  
 - Helmet, CORS  
-- Deployed on Vercel  
+- Deployed on Render 
 
 ---
 API Endpoints
